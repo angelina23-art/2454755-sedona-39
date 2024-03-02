@@ -1,16 +1,58 @@
+html{
+    height:100%;
+
+
+}
+.conteiner {
+    display:flex;
+    flex-direction: column;
+    flex-grow:1;
+    margin:0 auto;
+    width:1200px;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+}
 body{
+    margin:0;
+    padding: 0;
+    display:flex;
+    flex-direction: column;
+    min-height: 100%;
     font-family:"PT Sans", sans-serif;
     font-size: 18px;
     line-height: 21px;
     color:black;
     background-color: #F2F2F2;
 }
-
+.main-conteiner{
+    flex-grow: 1;
+}
+.main-index{
+    margin-top:-6px;
+}
  .page-header {
     color:#000000;
     background-color: #FFFFFF;
+    width: 1200px;
 
  }
+ .page-header-logo {
+    align-self: flex-start;
+    width: 140px;
+    margin-right: 44px;
+}
+ .navigation-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 32px;
+        margin: 0;
+        padding: 0;
+        margin-right: auto;
+        list-style: none;
+        width: 450px;
+    }
+
+
 
  .navigation-link{
     font-family: "PT sans", sans-serif;
@@ -22,13 +64,27 @@ body{
     text-decoration: none;
  }
  .navigation-link-current {
+        text-decoration: underline;
+        text-decoration-color: #756257;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 16px;
+        text-underline-position: under;
     font-family: "PT sans", sans-serif;
     line-height: 24px;
     font-size: 20px;
     font-weight: 700;
     color:inherit;
     text-align: center;
-    text-decoration: none;
+
+ }
+ .navigation-user {
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+    max-width: 270px;
+    margin-left: auto;
+    list-style: none;
  }
  .navigation-user-link {
     line-height: 24px;
@@ -42,15 +98,20 @@ body{
     font-size: 20px;
     color:#FFFFFF;
  }
+ .logo {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+ }
  .header-button{
-    line-height: 20px;
-    font-size: 16px;
+    font-family: "PT Sans , sans-serif";
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background-color: #756157;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
     background: #756157;
-    color: #FFFFFF;
-    text-transform: uppercase
  }
 
 .main-monitor {
@@ -60,6 +121,7 @@ background-repeat:no-repeat;
 background-position: left bottom, left top;
 background-color:blueviolet;
 width: 1200px;
+height: 485px;
 }
 
 .reason-title {
@@ -71,7 +133,7 @@ width: 1200px;
     text-transform: uppercase;
     width: 1200px;
 }
-p {
+.content {
     font-size: 22px;
     font-weight: 400;
     line-height: 26px;
@@ -79,18 +141,30 @@ p {
     width: 1200px;
 }
 .reason-item-accent{
+    display: flex;
+    margin: 0;
+    padding: 0;
+    text-align: center;
     background: #82b3d3;
     width: 1200px;
 }
+.reason-list{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+}
+
 .reason-item {
-    width: 1200px;
+    width: 400px;
     background-color: #83b3d31f;
 }
 .reason-subtitle {
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
-    text-align: center;
+
     text-transform: uppercase;
     color: #000000;
     width: 1200px;
@@ -119,18 +193,16 @@ p {
     text-align: center;
     text-transform: uppercase;
 }
-p {
-    font-size: 22px;
-    font-weight: 400;
-    line-height: 26px;
-    text-align: center;
+.locality-list {
+    display: flex;
+  flex-direction: row;
 }
-
 .locality-title {
     font-size: 24px;
     font-weight: 700;
     line-height: 28px;
     text-align: center;
+    padding-top: 96px;
     text-transform: uppercase;
 }
 .locality-description {
@@ -161,6 +233,7 @@ p {
 }
 
 .search-button{
+    font-family: "PT Sans , sans-serif";
      font-size: 20px;
     font-weight: 700;
     line-height: 36px;
@@ -202,6 +275,7 @@ p {
     color:#ffffff
 }
 .subscribe-button {
+    font-family: "PT Sans , sans-serif";
     font-size: 20px;
     font-weight: 700;
     line-height: 36px;
@@ -219,17 +293,6 @@ p {
     text-align: center;
     color: #000000;
 }
-.button{
-    line-height: 20px;
-    font-size: 16px;
-    font-weight: 700;
-    text-align: center;
-    text-decoration: none;
-    background: #756157;
-    color: #FFFFFF;
-    text-transform: uppercase
- }
-
 .all-filters {
     background-image:url("../images/filter.png");
 background-repeat:no-repeat;
@@ -350,6 +413,12 @@ color:#FFFFFF;
     color: #ffffff;
     background: #82b3d3;
     text-decoration: none;
+}
+.footer {
+    display: flex;
+margin: 70px;
+width: 1060px;
+justify-content:space-between;
 }
 @font-face {
     font-family: "PT Sans";
